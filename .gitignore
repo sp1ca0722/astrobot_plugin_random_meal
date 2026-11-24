@@ -2,6 +2,7 @@
 __pycache__/
 *.py[codz]
 *$py.class
+qq_id.txt
 
 # C extensions
 *.so
