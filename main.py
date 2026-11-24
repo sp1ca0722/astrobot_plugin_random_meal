@@ -167,6 +167,7 @@ class RandMeal(Star):
                     sentense = choice(human_templates).format(meal)
                 else:
                     sentense = choice(kfc_not_human)
+                logger.info(f"随机菜[疯狂星期四] -> {sentense}")
             # elif nowtime.month == 4 and nowtime.day == 1 and random() < 0.5 and session_id in {"1061360382", "877173610"}: # 愚人节，随机返回一个菜或mkkr
             #     meal = "真九"
             #     sentense = choice(human_templates).format(meal)
@@ -180,6 +181,7 @@ class RandMeal(Star):
             else:
                 meal = meals_41[randint(0,len(meals_41)-1)]
                 sentense = choice(human_templates).format(meal)
+                logger.info(f"随机菜 -> {meal}：{sentense}")
             yield event.plain_result(sentense) # 发送一条纯文本消息
             # yield event.plain_result(str(msg_arg=="")) # 发送一条纯文本消息
         elif msg_arg == "帮助" or msg_arg == "help":
